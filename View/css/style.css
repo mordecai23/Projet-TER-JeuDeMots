@@ -1,0 +1,574 @@
+/*--------------------------------------------------
+Arrière plan de la page animé    */
+
+.navbar-he {
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+    color : white;
+    padding-top: 190px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu-rank{
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+
+@keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+ #snackbarNotEnoughCredit {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbarNotEnoughCredit.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+ #snackbarSuccessCredit {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbarSuccessCredit.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+} 
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  overflow: hidden;
+  z-index: -1;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 19s linear infinite;
+}
+
+.background li:nth-child(0) {
+  left: 4%;
+  width: 196px;
+  height: 196px;
+  bottom: -196px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 67%;
+  width: 192px;
+  height: 192px;
+  bottom: -192px;
+  animation-delay: 5s;
+}
+.background li:nth-child(2) {
+  left: 76%;
+  width: 147px;
+  height: 147px;
+  bottom: -147px;
+  animation-delay: 6s;
+}
+.background li:nth-child(3) {
+  left: 19%;
+  width: 160px;
+  height: 160px;
+  bottom: -160px;
+  animation-delay: 3s;
+}
+.background li:nth-child(4) {
+  left: 15%;
+  width: 164px;
+  height: 164px;
+  bottom: -164px;
+  animation-delay: 3s;
+}
+.background li:nth-child(5) {
+  left: 76%;
+  width: 129px;
+  height: 129px;
+  bottom: -129px;
+  animation-delay: 9s;
+}
+.background li:nth-child(6) {
+  left: 27%;
+  width: 172px;
+  height: 172px;
+  bottom: -172px;
+  animation-delay: 21s;
+}
+.background li:nth-child(7) {
+  left: 85%;
+  width: 154px;
+  height: 154px;
+  bottom: -154px;
+  animation-delay: 9s;
+}
+.background li:nth-child(8) {
+  left: 89%;
+  width: 130px;
+  height: 130px;
+  bottom: -130px;
+  animation-delay: 23s;
+}
+.background li:nth-child(9) {
+  left: 21%;
+  width: 180px;
+  height: 180px;
+  bottom: -180px;
+  animation-delay: 3s;
+}
+
+/*--------------------------------------------------
+    Effet animation sur la navbar  */
+a.effect-shine:hover {
+
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+@-webkit-keyframes shine {
+ from {
+      -webkit-mask-position: 150%;
+  }
+
+  to {
+      -webkit-mask-position: -50%;
+  }
+}
+
+@keyframes shine {
+ from {
+        -webkit-mask-position: 150%;
+  }
+
+  to {
+      -webkit-mask-position: -50%;
+   }
+}
+
+/*--------------------------------------------------
+    Compte à rebours du jeu   */
+.base-timer {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}
+
+a, a:focus, button:focus, input:focus, select:focus, textarea:focus, .btn {
+    box-shadow: none !important;
+}
+
+/*--------------------------------------------------
+    Boutons spécifiques    */
+    
+.password-button {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-color: #ced4da;
+    padding: 0;
+}
+
+.btn-white {
+    color: black;
+    background-color: white;
+}
+
+.btn-white:hover {
+    background-color: #e6e6e6;
+}
+
+/*--------------------------------------------------
+    Champs personnalisés    */
+
+.has-feedback {
+    position: relative;
+}
+
+.form-control-feedback {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    text-align: center;
+    line-height: calc(1.5em + .75rem + 2px);
+    width: 38px;
+    height: calc(1.5em + .75rem + 2px);
+    border: solid 1px #ced4da;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    background-color: white;
+}
+
+.has-feedback .form-control {
+    width: calc(100% - 38px);
+    border-right: none;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+}
+
+
+
+.form-group div[class*="col-"] {
+    padding: 0;
+}
+
+/*--------------------------------------------------
+    tableau des mots durant une partie    */
+td {
+  word-wrap: break-word;
+}
+
+/*--------------------------------------------------
+    Baniere pour capture du terme    */
+#capture {
+  background-color: grey;
+  animation-name: example;
+  animation-duration: 30s;
+}
+
+@keyframes example {
+  0%   {background-color: grey;}
+  20%  {background-color: green;}
+  40%  {background-color: red;}
+  60% {background-color: green;}
+  80%  {background-color: red;}
+  100% {background-color: grey;}
+}
+
+/*--------------------------------------------------
+    Classement des joueurs    */
+.top3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #4B4168;
+}
+.top3 .item {
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+  width: 9rem;
+  height: 10rem;
+  text-align: center;
+  padding: 2.8rem 0 0;
+  margin: 1rem 1rem 2rem;
+  border-radius: 0.5rem;
+  transform-origin: bottom;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pic {
+  position: absolute;
+  top: -2rem;
+  left: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pos {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .score {
+  opacity: 1;
+}
+.top3 .item .score:after {
+  display: block;
+  opacity: 1;
+}
+.top3 .item.one {
+  width: 10rem;
+  height: 11rem;
+  padding-top: 3.5rem;
+}
+.top3 .item.one .pic {
+  width: 5rem;
+  height: 5rem;
+  left: 2.5rem;
+}
+.top3 .item:hover {
+  transform: scale(1.05);
+}
+
+.list {
+  padding-left: 2rem;
+  margin: 0 auto;
+}
+.list .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  height: 3rem;
+  border-radius: 4rem;
+  margin-bottom: 2rem;
+  background: #EAA786;
+  transform-origin: left;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.list .item .pos {
+  font-weight: 900;
+  position: absolute;
+  left: -2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  color: white;
+  opacity: 0.6;
+  transition: opacity 200ms ease-in-out;
+}
+.list .item .pic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.list .item .name {
+  flex-grow: 2;
+  flex-basis: 10rem;
+  font-size: 1.1rem;
+}
+.list .item .score {
+  margin-right: 1.5rem;
+  opacity: 1;
+}
+.list .item .score:after {
+  margin-right: 1rem;
+  content: "points";
+  opacity: 1;
+}
+.list .item:hover {
+  transform: scale(1.05);
+}
+.list .item:hover .pos {
+  opacity: 0.8;
+}
+
+.retroshd {                      
+  color: #e0dfdc;      
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+ }
+
+.deepshd {
+  color: #e0dfdc;
+  letter-spacing: .1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+ }
+
+/*--------------------------------------------------
+    Collection de termes    */
+ .box ul{
+   position: relative;
+
+ }
+
+ .box ul li{
+   list-style: none;
+   box-shadow: 0 5px 25px rgba(0, 0, 0, .1);
+   border-left: 2px solid #203a43;
+   transition: 0.5s;
+   cursor: pointer;
+ }
+
+ .box ul li::before {
+   content: '';
+   position: absolute;
+   width: auto;
+   height: auto;
+   background: #000;
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: 0.5s;
+ }
+
+ .box ul li:hover::before{
+  transform: scaleX(1);
+ }
+ .box ul li:hover{
+   left: 10px;
+ }
+
+ .box ul li span {
+   position: relative;
+   display: inline-block;
+   z-index: 1;
+   transition: 0.5s;
+ }
+
+ .box ul li:hover span {
+  color: #0f2027;
+
+ }
+
+ /* Compte à rebours mensuel */
+ #countdown-month>ul>li {
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+#countdown-month>ul>li>span {
+  display: block;
+  font-size: 2rem;
+}
+
+ /* Compte à rebours hébdomadaire */
+ #countdown-week>ul>li {
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+#countdown-week>ul>li>span {
+  display: block;
+  font-size: 2rem;
+}
+
